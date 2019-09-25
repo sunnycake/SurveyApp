@@ -11,48 +11,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/yes_button"
-        app:layout_constraintBottom_toTopOf="@+id/yes_count"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/no_button"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias=".70"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.801" />
+        app:layout_constraintVertical_bias=".30" />
 
     <Button
         android:id="@+id/no_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/no_button"
-        app:layout_constraintBottom_toTopOf="@+id/no_count"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias=".70"
         app:layout_constraintStart_toEndOf="@+id/yes_button"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.801" />
+        app:layout_constraintVertical_bias=".30" />
 
     <Button
-        android:id="@+id/reset_button"
+        android:id="@+id/reset_survey_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/reset_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias=".80"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yes_button"
-        app:layout_constraintVertical_bias="0.796" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".80" />
 
     <TextView
         android:id="@+id/survey_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FF9800"
         android:text="@string/survey_question_text"
-        app:layout_constraintBottom_toTopOf="@+id/reset_button"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif-smallcaps"
+        app:layout_constraintBottom_toTopOf="@+id/reset_survey_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157" />
+        app:layout_constraintVertical_bias="0.20" />
 
     <TextView
         android:id="@+id/yes_count"
@@ -63,7 +69,8 @@
         app:layout_constraintEnd_toStartOf="@+id/no_count"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
 
     <TextView
         android:id="@+id/no_count"
@@ -72,8 +79,33 @@
         android:text="@string/no_count_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias=".50"
         app:layout_constraintStart_toEndOf="@+id/yes_count"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".40" />
+
+    <Button
+        android:id="@+id/results_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Results"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/enter_new_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_new_question"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".80" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
